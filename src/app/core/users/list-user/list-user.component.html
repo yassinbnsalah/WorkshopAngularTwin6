@@ -1,0 +1,34 @@
+<table border="2px">
+    <tr>
+        <td> id </td>
+        <td> firstName</td>
+        <td> lastName </td>
+        <td> birthDate </td>
+        <td> accountCategory </td>
+        <td> email </td>
+        <td> action </td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}} </td>
+        <td><img src="{{user.picture}}" width="50px" height="50px">
+            {{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.birthDate}}</td>
+        <td>{{user.accountCategory }}</td>
+        <td>{{user.email}}</td>
+        <td> <button (click)="deleteUserByID(user.id)"> Delete </button></td>
+    </tr>
+  
+ 
+</table>
+<h1> new User</h1>
+
+    firstname : <input type="text" [(ngModel)]="user.firstName" /><br>
+    lastname : <input type="text" [(ngModel)] ="user.lastName"/><br>
+    birthDate : <input type="text" [(ngModel)]="user.birthDate" /><br>
+    accountCategory : <input type="text" [(ngModel)] ="user.accountCategory"/><br>
+    email : <input type="text" [(ngModel)]="user.email" /><br>
+    password : <input type="text" [(ngModel)]="user.password" /><br>
+    profession : <input type="text" [(ngModel)]="user.profession" /><br>
+   
+    <button (click)="addUser()"> add </button>

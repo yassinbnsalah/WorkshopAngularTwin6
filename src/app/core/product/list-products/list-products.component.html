@@ -1,0 +1,24 @@
+
+
+
+<table border="2px solid black"> 
+    <tr>
+        <td> id </td>
+        <td> code </td>
+        <td> libelle </td>
+        <td> prix </td>
+        <td> TVA </td>
+        <td> action </td>
+    </tr>
+
+    <tr *ngFor="let product of ListProduct">
+        <td> {{product.id}} </td>
+        <td> {{product.code}} </td>
+        <td> {{product.libelle}} </td>
+        <td> {{product.prixunitaire}} </td>
+        <td> {{product.tauxTva}} </td>
+        <td> <button (click)="GoToDelete(product.id)"> Delete </button>
+            <button (click)="GoToDetails(product.id)"> details</button></td>
+    
+    </tr>
+</table>
